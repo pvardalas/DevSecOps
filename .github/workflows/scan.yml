@@ -40,6 +40,10 @@ jobs:
     #       username: ${{ github.actor }}
     #       password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Verify Image Exists
+        run: docker pull ${{ inputs.docker_image }} || { echo "Image not found or unauthorized"; exit 1; }
+
+
       # Pull the github input image or use the default
       - name: Pull the image
         run: docker pull ${{ github.event.inputs.docker_image }}
