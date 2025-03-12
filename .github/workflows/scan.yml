@@ -8,7 +8,7 @@ on:
         docker_image:
           description: 'The Docker image to scan'
           required: true
-          default: 'bitnami/mysql:latest'
+          default: 'artifision/php-dumper-docker-extension:1.0.0'
 
 # env:
 #   REGISTRY: ghcr.io
@@ -39,9 +39,6 @@ jobs:
     #       registry: ${{ env.REGISTRY }}
     #       username: ${{ github.actor }}
     #       password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify Image Exists
-        run: docker pull ${{ inputs.docker_image }} || { echo "Image not found or unauthorized"; exit 1; }
 
 
       # Pull the github input image or use the default
