@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
         docker_image:
-          description: 'Langflow'
+          description: 'Solar'
           required: true
-          default: 'langflowai/langflow'
+          default: 'upstage/solar'
 
 jobs:
   scout:
