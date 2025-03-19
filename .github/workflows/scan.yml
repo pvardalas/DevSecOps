@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
         docker_image:
-          description: 'Selenium'
+          description: 'Langflow'
           required: true
-          default: 'selenium/video'
+          default: 'langflowai/langflow'
 
 # env:
 #   REGISTRY: ghcr.io
