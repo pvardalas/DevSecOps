@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
         docker_image:
-          description: 'The Docker image to scan'
+          description: 'Selenium'
           required: true
-          default: 'artifision/php-dumper-docker-extension:1.0.0'
+          default: 'selenium/video'
 
 # env:
 #   REGISTRY: ghcr.io
